@@ -1,0 +1,12 @@
+import gtk
+
+let app = gtk.GtkApplication("io.github.kuroko-lang.example")
+
+def activate():
+    app.window = gtk.GtkWindow(app)
+    app.window.set_title("Window")
+    app.window.set_default_size(200,200)
+    app.window.show_all()
+
+app.signal_connect("activate", activate)
+app.run()
